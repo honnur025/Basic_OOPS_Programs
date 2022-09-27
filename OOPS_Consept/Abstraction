@@ -1,0 +1,30 @@
+package Abstraction;
+
+import java.util.Scanner;
+
+interface Login{
+	void login();
+}
+public class Gmail implements Login{
+	Scanner sc=new Scanner(System.in);
+	@Override
+	public void login() {
+		System.out.println("Enter Userid");
+		int userid=sc.nextInt();
+		if(userid==123) {
+			System.out.println("Enter Password");
+			String ps=sc.next();
+			if(ps.equals("jsp@123")) {
+				System.out.println("LogIn Succesfull");
+			}else {
+				System.out.println("Password Wrong");
+			}
+		}else {
+			System.out.println("UserId Wrong");
+		}
+	}
+	public static void main(String[] args) {
+		Login l=new Gmail();
+		l.login();
+	}
+}
