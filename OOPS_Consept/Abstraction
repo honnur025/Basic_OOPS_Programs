@@ -24,6 +24,7 @@ public class Gmail implements Login{
 		}
 	}
 	public static void main(String[] args) {
+		// Upcasting
 		Login l=new Gmail();
 		l.login();
 	}
