@@ -1,0 +1,27 @@
+package MethodOverloading;
+
+public class Train {
+
+	String trainName;
+	int trainNum;
+	long trainPnrNum;
+	
+	void findTrain(int trainNum) {
+		System.out.println("Train Find By "+trainNum);
+	}
+	void findTrain(String trainName) {
+		System.out.println("Train Find By "+trainName);
+	}
+	void findTrain(long trainPnrNum) {
+		System.out.println("Train Find By "+trainPnrNum);
+	}
+	
+	public static void main(String[] args) {
+		Train t1=new Train();
+		t1.findTrain(51367);
+		System.out.println("----------");
+		t1.findTrain("Hampi Express");
+		System.out.println("----------");
+		t1.findTrain(52157643);
+	}
+}
