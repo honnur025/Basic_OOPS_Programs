@@ -1,0 +1,67 @@
+//1st Class
+
+public class Person {
+	String name;
+	int age;
+	char gender;
+	Person(String name, int age,char gender){
+		this.name=name;
+		this.age=age;
+		this.gender=gender;
+	}
+	void details() {
+		System.out.println("Name: "+this.name+" Age: "+this.age+" Gender"+this.gender);
+	}
+}
+
+//2nd Class
+
+public class Student extends Person {
+	String usn;
+	double marks;
+	String cllg;
+	Student(String name,int age,char gender,String cllg,String usn,double marks){
+		super(name,age,gender);
+		this.usn=usn;
+		this.marks=marks;
+		this.cllg=cllg;
+	}
+	void details() {
+		System.out.println("Name: "+this.name+" Age: "+this.age+" Gender: "+this.gender+
+				" USN :"+this.usn+" Marks: "+this.marks+" Collegs: "+this.cllg);
+	}
+}
+
+//3rd Class
+
+public class Employee extends Person {
+	int id;
+	double salary;
+	String desig;
+	
+	Employee(String name,int age,char gender,int id,double salary,String desig){
+		super(name,age,gender);
+		this.id=id;
+		this.salary=salary;
+		this.desig=desig;
+	}
+	void details() {
+		System.out.println("Name: "+this.name+" Age: "+this.age+" Gender: "+this.gender+" Id: "+this.id+" Salary: "+this.salary+" Designation: "+this.desig);
+	}
+}
+
+//Main Class
+
+public class Mainclass1 {
+	public static void main(String[] args) {
+		Person p1= new Person("Raju",25,'M');
+		p1.details();
+
+		Student s1= new Student("Rani",19,'F',"BMSC","CS001",67.56);
+		s1.details();
+
+		Employee e1= new Employee("Arun",26,'M',1233,45000,"Developer");
+		e1.details();
+
+	}
+}
