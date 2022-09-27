@@ -1,0 +1,18 @@
+package MethodOverriding;
+
+class Employee{
+	void work() {
+		System.out.println("Working As A Employee");
+	}
+}
+class Developer extends Employee{
+	void work() {
+		System.out.println("Working As A Developer");
+	}
+}
+class MainClass {
+	public static void main(String[] args) {
+		Employee e=new Developer();
+		e.work();
+	}
+}
