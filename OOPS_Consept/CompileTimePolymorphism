@@ -1,0 +1,14 @@
+package Polymorphisam.CompileTimePolymorphism;
+
+class Flipkart{
+	static void purchase(String productName) {
+		System.out.println("Purchased By Using Product Name :"+productName);
+	}
+	static void purchase(double productCost) {
+		System.out.println("Purchased By Using Cost :"+productCost);
+	}
+	public static void main(String[] args) {
+		purchase("Laptop");
+		purchase(35000);
+	}
+}
