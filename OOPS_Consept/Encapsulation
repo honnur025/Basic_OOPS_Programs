@@ -1,0 +1,37 @@
+package Encapsulation;
+
+public class Account {
+	private String custName;
+	private int accNum;
+	private double accBal;
+	
+	public String getCustName() {
+		return custName;
+	}
+	public void setCustName(String custName) {
+		this.custName = custName;
+	}
+	
+	public int getAccNum() {
+		return accNum;
+	}
+	public void setAccNum(int accNum) {
+		this.accNum = accNum;
+	}
+	
+	public double getAccBal() {
+		return accBal;
+	}
+	public void setAccBal(double accBal) {
+		this.accBal = accBal;
+	}
+	public static void main(String[] args) {
+		Account a=new Account();
+		a.setAccNum(101);
+		a.setCustName("Uday");
+		a.setAccBal(500);
+		System.out.println("Account Number :"+a.getAccNum());
+		System.out.println("Account Holder Name :"+a.getCustName());
+		System.out.println("Account Balance :"+a.getAccBal());
+	}
+}
